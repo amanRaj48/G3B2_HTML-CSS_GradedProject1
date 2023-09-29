@@ -1,0 +1,298 @@
+/* Reset styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the header */
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.logo img {
+    width: 70px;
+    height: auto;
+    margin-right: -55px;
+    border-radius: 50%;
+}
+
+.header-text {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.header-text p {
+    text-align: right;
+}
+
+/* Basic styling for the navigation bar */
+nav {
+    background-color: #444;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 10px;
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* Style the submenu */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #555;
+    top: 100%;
+    left: 0;
+}
+
+nav li:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    margin: 0;
+    white-space: nowrap;
+}
+
+label {
+    background-color: silver;
+    border: 1px solid peru;
+    font-style: oblique;
+    color: royalblue;
+    font-size: 18px;
+}
+
+/* Style the main content area */
+main {
+    padding: 20px;
+}
+
+/* Basic styling for sections */
+section {
+    margin-bottom: 20px;
+}
+
+#offers {
+    overflow: hidden;
+    background-color: #cef486;
+    padding: 20px;
+    text-align: center;
+}
+
+#offers:hover {
+    background-color: #acf39a;
+}
+
+/* New styles for imageCarousel */
+.carousel-container {
+    display: flex;
+    width: 500%;
+    animation: moveImages 20s linear infinite;
+    margin-left: -4%;
+}
+
+.carousel-container img {
+    width: 15%;
+    height: auto;
+    margin-right: 2%;
+    border: 2px solid steelblue;
+}
+
+@keyframes moveImages {
+    0% {
+        transform: translateX(0%);
+    }
+
+    20% {
+        transform: translateX(-20%);
+    }
+
+    40% {
+        transform: translateX(-40%);
+    }
+
+    60% {
+        transform: translateX(-60%);
+    }
+
+    80% {
+        transform: translateX(-80%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* Styling for product listings under Covid Care */
+.product {
+    border: 2px solid steelblue;
+    padding: 22px;
+    text-align: center;
+    transition: transform 0.2s, background-color 0.3s, border-color 0.3s;
+    width: 23%;
+    margin-right: 2%;
+    float: left;
+    height: 300px;
+}
+
+/* Add some margin to the bottom of the "Covid Care" and "Diabetes Care" sections */
+#covidCare,
+#diabetesCare {
+    margin-bottom: 10px;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    background-color: rgb(250, 234, 230);
+    border-color: rgb(0, 255, 76);
+    cursor: pointer;
+}
+
+.product img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* To ensure products are displayed as block elements */
+#covidCare .product,
+#diabetesCare .product {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.product h3 {
+    font-size: 16px;
+}
+
+.product p {
+    margin: 5px 0;
+}
+
+.product button.add-to-cart {
+    background-color: steelblue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.product button.add-to-cart:hover {
+    background-color: rgb(0, 255, 76);
+    border-color: rgb(0, 255, 76);
+}
+
+.product-section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Add padding to the bottom of the main content area */
+main {
+    padding-bottom: 100px;
+}
+
+#labtformmain {
+    margin-bottom: 223px;
+    margin-top: 50px;
+}
+
+/* Styling for the footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+/* Styling for Lab Test form */
+#labTestForm {
+    padding: 20px;
+    background-color: #9e9ef7f0;
+    border: 2px solid #ccc;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* labtestform css*/
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.buttons {
+    margin-top: 8px;
+}
+
+/* Style for the Reset button */
+button[type="reset"] {
+    background-color: rgb(102, 123, 245);
+    color: whitesmoke;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-right: 10px;
+    width: 80px;
+}
+
+/* Style for the Submit button */
+button[type="submit"] {
+    background-color: rgb(102, 123, 245);
+    color: whitesmoke;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 80px;
+}
+
+#labTestFormPlaceholder {
+    flex: 1;
+    padding-right: 10px;
+}
+
+#rightSideImage {
+    flex: 1;
+    padding-left: 10px;
+}
+
+/* Add any other styling as needed for your specific layout */
+
+#labTestForm {
+    max-width: 100%;
+    height: 472px;
+}
+
+#rightSideImage img {
+    max-width: 100%;
+    height: auto;
+}

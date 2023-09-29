@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form-container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width: 100%;
+}
+
+#labTestForm {
+    margin: 15px;
+}
+
+h2 {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+label {
+    display: block;
+    font-weight: Normal;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+input[type="date"],
+input[type="time"] textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-top: 2px;
+}
+
+select {
+    height: 40px;
+}
+
+.test-types {
+    margin-top: 5px;
+}
+
+.test-types label {
+    display: block;
+    margin-top: 5px;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button[type="submit"],
+button[type="reset"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover,
+button[type="reset"]:hover {
+    background-color: #0056b3;
+}
+
+#rightSideImage img{
+    width: 650px;
+    height:500px;
+    padding-inline-start: 15px;
+    padding-bottom: 78%;
+    
+}
+
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .form-container {
+        margin-right: 20px;
+        width: 48%;
+    }
+
+    #rightSideImage {
+        display: inline-flex;
+        width: 48%;
+    }
+}
+
+footer {
+    text-align: center;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 0;
+    width: 100%;
+}
+
+/* Arrange elements in one row side by side for small screens */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.row label,
+.row input {
+    width: 100%;
+    margin-top: 5px;
+}

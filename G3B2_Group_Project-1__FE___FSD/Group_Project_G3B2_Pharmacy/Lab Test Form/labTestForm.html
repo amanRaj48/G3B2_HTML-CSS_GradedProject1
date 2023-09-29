@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="testFormStyle.css">
+    </head>
+
+<body>
+    <header>
+        <h1>Lab Test Form</h1>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <form id="labTestForm" onsubmit="return validate()">
+
+                <!-- Patient Contact Details -->
+                <h2>Patient Contact Details</h2>
+                <div class="row">
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your Full Name" required>
+                    <input type="text" id="patientId" placeholder="Enter your Patent ID" name="patientId">
+                </div>
+
+                <div class="row">
+                    <input type="tel" id="contactNumber" name="contactNumber" placeholder="Enter your Phone Number" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your e-Mail ID" required>
+                </div>
+
+                <!-- Address -->
+                <h2>Address</h2>
+                <div class="row">
+                    <input type="text" id="houseNumber" name="houseNumber" placeholder="Enter your House/Flat Number" required>
+                    <input type="text" id="street" name="street" placeholder="Enter your Street Name" required>
+                </div>
+
+                <div class="row">
+                    <input type="text" id="area" name="area" placeholder="Enter your Area" required>
+                    <select id="district" name="district" placeholder="Select your District" required>
+                        <option value="choose">Choose</option>
+                        <option value="DL">DL</option>
+                        <option value="BM">BM</option>
+                        <option value="MA">MA</option>
+                        <option value="KO">KO</option>
+                        <option value="TV">TV</option>
+                        <option value="BR">BR</option>
+                        <option value="HY">HY</option>
+                    </select>
+                </div>
+
+                <!-- Choose the Test Type -->
+                <h2>Choose the Test Type</h2>
+                <div class="test-types">
+                    <label><input type="checkbox" name="testType" value="CBC"> CBC</label>
+                    <label><input type="checkbox" name="testType" value="Complete Urine"> Complete Urine</label>
+                    <label><input type="checkbox" name="testType" value="Lipid Profile"> Lipid Profile</label>
+                    <label><input type="checkbox" name="testType" value="TSH"> Thyroid Stimulating
+                        Hormone(TSH)</label>
+                    <label><input type="checkbox" name="testType" value="Glucose Test"> Glucose Test</label>
+                </div>
+
+                <!-- Do you want a hard copy of the report also? -->
+                <h2>Do you want a hard copy of the report also?</h2>
+                <label><input type="radio" name="hardCopy" value="Yes"> Yes</label>
+                <label><input type="radio" name="hardCopy" value="No"> No</label>
+
+                <!-- Select Your Comfortable Date and Time -->
+                <h2>Select Your Comfortable Date and Time</h2>
+                <div class="row">
+                    <label for="appointmentDate">Date:</label>
+                    <input type="date" id="appointmentDate" name="appointmentDate" required>
+
+                    <label for="appointmentTime">Time:</label>
+                    <input type="time" id="appointmentTime" name="appointmentTime" required>
+                </div>
+
+                <!-- Reset and Submit button -->
+                <div class="buttons">
+                    <button type="reset">Reset</button>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Right side image -->
+        <section id="rightSideImage">
+            <img src="medicalRelatedPhoto.jpg" alt="Right Side Image" />
+        </section>
+    </main>
+
+    <footer>
+        <p>@copyright. Only for demonstration purposes</p>
+    </footer>
+
+    <script>
+        function validate() {
+            var s1 = document.getElementById('district').value;
+            var flag=true;
+            if (s1 == "choose") {
+                alert("Kindly select District going back to Form and submit again please");
+                flag=false;
+            }
+            return flag;
+        }
+    </script>
+
+    <script src="formScript.js"></script>
+
+</body>
+
+</html>

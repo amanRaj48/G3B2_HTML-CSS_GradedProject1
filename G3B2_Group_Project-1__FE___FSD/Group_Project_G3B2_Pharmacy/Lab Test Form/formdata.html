@@ -1,0 +1,61 @@
+<!--formdata.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data</title>
+</head>
+
+<body>
+    <h1>Form Data</h1>
+
+    <script>
+        // Function to retrieve URL parameters
+        function getURLParameters() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const formData = {};
+
+            // Loop through each parameter and store it in the formData object
+            for (const [key, value] of urlParams.entries()) {
+                formData[key] = value;
+            }
+
+            return formData;
+        }
+
+        // Get the form data from URL parameters
+        const formData = getURLParameters();
+
+        // Display the form data on the page
+        const formContainer = document.createElement('div');
+
+        for (const key in formData) {
+            const fieldContainer = document.createElement('div');
+            // Exclude the line for the entire "address" object
+            if (key === 'address') {
+                continue;
+            }
+            fieldContainer.innerHTML = `<strong>${key}:</strong> ${formData[key]}`;
+            formContainer.appendChild(fieldContainer);
+        }
+
+        // Display the Full Address
+        /* const addressDisplay = document.createElement('p');
+        addressDisplay.innerHTML = `<strong>Full Address:</strong> ${formData.address.houseNumber}, ${formData.address.street}, ${formData.address.area}, ${formData.address.district}`;
+        formContainer.appendChild(addressDisplay);
+ */
+
+
+        document.body.appendChild(formContainer);
+
+
+
+    </script>
+    <script src="scriptboth.js"></script>
+</body>
+
+</html>
